@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+/*全体*/
+.wrapper{
+  max-width:600px;
+  margin:0 auto;
+  color:#666;
+}
+#header{
+  text-align: center;
+  font-size:24px;
+  width:100%;
+  margin:1rem 0 0;
+  animation-name:fadeInAnime;
+  /*1回のアニメーションが終わるまでの時間*/
+  animation-duration:1s;
+  /*適応方法*/
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+@keyframes fadeInAnime{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/*カレンダー*/
+#calendar{
+  text-align: center;
+  width:100%;
+}
+table{
+  outline:2px solid #ddd;
+  border-collapse: collapse;
+  width: 100%;
+}
+th{
+  color:#000;
+}
+th, td{
+  outline:1px solid #ddd;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+/*日曜日*/
+td:first-child{
+  color: red;
+}
+/*土曜日*/
+td:last-child{
+  color: blue;
+}
+/*前後月の日付*/
+/*ちょっと薄めの色*/
+td.disabled{
+  color: #ccc;
+}
+/*本日*/
+td.today{
+  background-color: #D65E72;
+  color: #fff;
+}
+
+/*ボタン*/
+#next-prev-button{
+  position: relative;
+}
+#next-prev-button button{
+  /*カーソルの種類*/
+  cursor: auto;
+  background: #cddd3d;
+  color: #fff;
+  border: 1px solid #cddd3d;
+  border-radius: 4px;
+  font-size: 1rem;
+  /*ボタンの縦横の長さ*/
+  padding: 0.8rem 5rem;
+  /*他との上下,左右の間隔*/
+  margin: 1rem 0;
+}
+#next-prev-button button:hover{
+  background-color: #77d439;
+  border-color: #77d439;
+}
+#prev{
+  float: left;
+}
+#next{
+  float: right;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  color: #404040;
+  border-left: solid 6px #1fa67a;/*左側の線*/
+  border-bottom: solid 2px #dadada;/*下に灰色線*/
+  background: whitesmoke;
+  margin-bottom: 5px;/*下のバーとの余白*/
+  line-height: 1.5;
+  padding: 0.5em;
+  list-style-type: none!important;/*ポチ消す*/
+  font-weight: bold;
+}

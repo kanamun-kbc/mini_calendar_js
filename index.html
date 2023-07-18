@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="wrapper">
+    <!--年月を表示-->
+    <h1 id="header"></h1>
+
+    <!--ボタンクリックで月移動-->
+    <div id="next-prev-button">
+      <button id="prev" onclick="prev()">◀</button>
+      <button id="next" onclick="next()">▶</button>
+    </div>
+
+    <!--カレンダー-->
+    <div id="calendar"></div>
+    <p>今日のやること</p>
+    <div id="routine"></div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
